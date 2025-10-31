@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: black;
+}
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #e50914;
+    font-size: 20px;
+    z-index: 9999;
+}
+.spinner {
+    border: 4px solid #333;
+    border-top: 4px solid #e50914;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.video-background video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+.video-background .logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    z-index: -1;
+    opacity: 0.8;
+}
+header, section, footer {
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1100px;
+}
+.topbar strong {
+    color: #e50914;
+    font-size: 26px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #e50914;
+}
+h2 {
+    color: #e50914;
+    margin-bottom: 15px;
+}
+.personagens-lista1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+article {
+    width: 220px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #e50914;
+}
+article img {
+    width: 100%;
+    border-radius: 8px;
+}
+#reptile-egg:hover {
+    box-shadow: 0 0 25px #00ff66;
+}
+footer {
+    text-align: center;
+    color: #ccc;
+}
